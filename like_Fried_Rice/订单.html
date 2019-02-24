@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<link rel="stylesheet" href="css/upheader.css" />
+		<link rel="stylesheet" href="css/body.css"  />
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/jSlider.min.css" />
+		<link rel="stylesheet" href="css/zuoyougundong.css" />
+		<link rel="stylesheet" href="css/center.css"  />
+		<style type="text/css">
+			.select1{border: 1px black solid;font-size: 12px;height: 25px;}	
+			#div2{width: 829px;height: 35px;border: 1px gray solid;text-align: center;padding-top: 15px;font-size: 12px;}
+			#table1{width: 829px;height: 30px;border: 1px gray solid;border-bottom: none;background: #FAFAFA;}
+			#button1{border: none;background: black;color: white;float: right;width: 100px;height: 25px; font-size: 12px;}
+			#ssddh{height: 20px;width: 200px; border: 1px black solid;font-size: 12px;}
+			#maininfor{ width: 830px;height:80px; }
+		</style>
+		<script src=" js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/dati.js" ></script>
+		<script type="text/javascript" src="js/jquery.jSlider.min.js" ></script>
+		<script type="text/javascript">
+			
+		</script>
+	</head>
+	<body style="margin: 0px;">
+		<div id="upheader">
+			<!--顶部导航-->
+				<!--a标签回到顶部-->
+			<div name="top" id="upleft"onmouseover="showmin1()" onmouseout="showmin2()"><span >关注</span></div>
+			<div id="upleft2"onmouseover="showmin11()" onmouseout="showmin22()"><span >下载APP</span></div>
+				<div class="yc" id="yc1" onmouseover="showmin1()" onmouseout="showmin2()"><img src="img/e1.png"/><br />关注公众号</div>
+				<div class="yc" id="yc2" onmouseover="showmin11()" onmouseout="showmin22()"><img src="img/e2.png"/>优购APP下载</div>
+			<div id="upright">
+				<ul>
+					<li><a>登录</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a>注册</a></li>
+					<li>个人中心</li>
+					<li id="li1"><img src="img/image1/1.png" />&nbsp;&nbsp;<span>收藏</span></li>
+					<li id="li2"><img src="img/image1/2.png" />&nbsp;&nbsp;<span>购物袋</span></li>
+					<li>公告</li>
+				</ul>
+			</div>
+		</div>
+			<!--logo 及底部导航-->
+		<div id="upbodyer">
+			<div id="logo"><img src="img/image1/3.png"/></div>
+			<div class="upfoot"> 
+				<ul>
+					<li>首页</li>
+					<li onmouseover="show1()" onmouseout="show2()" onmousewheel="show2()">女鞋</li>
+					<li onmouseover="show1()" onmouseout="show2()" onmousewheel="show2()">男鞋</li>
+					<li onmouseover="show1()" onmouseout="show2()" onmousewheel="show2()">运动</li>
+					<li onmouseover="show1()" onmouseout="show2()" onmousewheel="show2()">户外</li>
+					<li onmouseover="show1()" onmouseout="show2()" onmousewheel="show2()">儿童</li>
+					<li onmouseover="show1()" onmouseout="show2()" onmousewheel="show2()">箱包</li>
+				</ul>
+				<div id="select">	
+					<img src="img/image1/4.png"/><input type="text" id="text1" />
+				</div>
+			</div>
+		</div>
+		<!--下拉出现导航-->
+		<div id="upfixed">
+				<ul>
+					<li><img src="img/image1/5.png" /></li>
+					<li>首页</li>
+					<li onmouseover="show12()" onmouseout="show2()" onmousewheel="show2()">女鞋</li>
+					<li onmouseover="show12()" onmouseout="show2()" onmousewheel="show2()">男鞋</li>
+					<li onmouseover="show12()" onmouseout="show2()" onmousewheel="show2()">运动</li>
+					<li onmouseover="show12()" onmouseout="show2()" onmousewheel="show2()">户外</li>
+					<li onmouseover="show12()" onmouseout="show2()" onmousewheel="show2()">儿童</li>
+					<li onmouseover="show12()" onmouseout="show2()" onmousewheel="show2()">箱包</li>
+				</ul>
+				<div id="select2">	
+					<img src="img/image1/4.png"/><input type="text" id="text2" />
+				</div>
+		</div>
+		<!--显示列表-->
+		<div id="show1" onmouseover="show1()" onmouseout="show2()" onmousewheel="show2()">
+			<div class="sh">
+				<div class="min1">
+					<p>品牌</p>
+						<ul>
+							<li>百丽</li>
+							<li>天美意</li>
+							<li>森达</li>
+							<li>思加图</li>
+							<li>暇步士</li>
+							<li>百思图</li>
+						</ul>
+				</div>
+				<div class="min1">
+					<p>&nbsp;</p>
+					<ul id="ul1">
+						<li>她祂</li>
+						<li>妙丽</li>
+						<li>真美诗</li>
+						<li>百思图</li>
+						<li>思加图</li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sh">
+				<div class="min1">
+					<p>靴子</p>
+						<ul>
+							<li>长靴</li>
+							<li>马丁靴</li>
+							<li>短靴</li>
+							<li>雪地靴</li>
+							<li>暇步士</li>
+							<li>中靴</li>
+						</ul>
+				</div>
+				<div class="min1">
+					<p>&nbsp;</p>
+					<ul id="ul1">
+						<li></li>
+						<li></li>
+						<li>森达</li>
+						<li>思加图</li>
+						<li>暇步士</li>
+						<li>百思图</li>
+					</ul>
+				</div>
+			</div>
+			<div class="sh">
+				<div class="min1">
+					<p>单鞋</p>
+						<ul>
+							<li>浅口鞋</li>
+							<li>小白鞋</li>
+							<li>靴子</li>
+							<li>休闲鞋</li>
+							<li>暇步士</li>
+							<li>百思图</li>
+						</ul>
+				</div>
+			</div>
+			<div class="sh">
+				<div class="min1">
+					<p>凉鞋</p>
+						<ul>
+							<li>凉拖</li>
+							<li>纯凉鞋</li>
+							<li>森达</li>
+							<li>思加图</li>
+							<li>暇步士</li>
+							<li>百思图</li>
+						</ul>
+				</div>
+			</div>
+			<div class="sh">
+				<div class="min1">
+					<p>关键词</p>
+						<ul>
+							<li>新品</li>
+							<li>赚柜款</li>
+							<li>秋季</li>
+							<li>春夏季</li>
+							<li>暇步士</li>
+							<li>百思图</li>
+						</ul>
+				</div>
+			</div>
+		</div>
+		<div id="body">
+			<div id="center1">
+				<div id="center1min">
+					<span>您当前的位置&nbsp;:&nbsp;>&nbsp;<span id="aa4">首页</span>&nbsp;>&nbsp;个人中心</span>
+				</div>
+			</div>
+			<div id="center2">
+				<div id="center2left">
+					<h3>我的优购</h3>
+					<ul>
+						<li class="li1">交易中心</li>
+						<li class="li2">我的订单</li>
+						<li class="li2">我的收藏</li>
+						<li class="li2">我的购物车</li>
+						<li class="li2">商品评论/晒单</li>
+						<li class="li2">站内消息(1)</li>
+					</ul>
+					<ul>
+						<li class="li1">我的资产</li>
+						<li class="li2">我的优惠券</li>
+						<li class="li2">我的礼品卡</li>
+						<li class="li2">我的积分</li>
+					</ul>
+					<ul>
+						<li class="li1">个人设置</li>
+						<li class="li2">安全设置</li>
+						<li class="li2">我的收货地址</li>
+					</ul>
+					<ul>
+						<li class="li1">售后服务</li>
+						<li class="li2">查看退换货</li>
+						<li class="li2">申请退换货</li>
+					</ul>
+				</div>
+				<div id="center2right">
+					<div id="maininfor">
+						<span style="font-size: 18px;font-weight: bold;">我的订单</span><br />
+						<p style="float: left;"><span style="font-size:12px;">显示：</span>
+							<select class="select1">
+								<option>6个月内订单</option>
+								<option>今年内其他订单</option>
+								<option>2017</option>
+							</select>
+							<select class="select1">
+								<option>所有状态</option>
+								<option>订单生成</option>
+								<option>配货中</option>
+								<option>已发货</option>
+								<option>已取消</option>
+							</select>
+							<select class="select1">
+								<option>支付状态</option>
+								<option>已支付</option>
+								<option>未支付</option>
+							</select>
+							<input type="checkbox"/><span style="font-size: 12px;">已取消</span>
+							</p>
+							<p style="float: left;margin-left: 165px;"><input type="text" value="订单号" id="ssddh"/>&nbsp;
+							<input type="button" value="搜索订单" id="button1"/>
+							</p>
+						
+					</div>
+					<div id="table1">
+						
+					</div>
+					<div id="div2">
+						您最近没购买过任何商品，先去挑选商品吧！~
+					</div>
+				</div>
+			</div>
+			<div id="body7">
+				<div id="body7min">
+					<ul>
+						<li><img src="img/s1.png" /></li>
+						<li><img src="img/s2.png" /></li>
+						<li><img src="img/s3.png" /></li>
+						<li><img src="img/s4.png" /></li>
+					</ul>
+				</div>
+				<div id="body7min1">
+					<div class="body7min2">
+						<p>新手帮助</p>
+						<ul id="ul1">
+							<li>交易条款协议</li>
+							<li>注册新用户</li>
+							<li>会员积分详情</li>
+						</ul>
+					</div>
+					<div class="body7min2">
+						<p>购物指南</p>
+						<ul id="ul1">
+							<li>订购流程</li>
+							<li>验货与签收</li>
+							<li>订单配送</li>
+						</ul>
+					</div>
+					<div class="body7min2">
+						<p>支付/配送</p>
+						<ul id="ul1">
+							<li>支付方式</li>
+							<li>配送方式</li>
+							<li>配送时间及运费</li>
+						</ul>
+					</div>
+					<div class="body7min2">
+						<p>售后服务</p>
+						<ul id="ul1">
+							<li>退换货政策</li>
+							<li>退款说明</li>
+							<li>发票制度</li>
+						</ul>
+					</div>
+					<div class="body7min2">
+						<p>会员服务</p>
+						<ul id="ul1">
+							<li>找回密码</li>
+							<li>联系我们</li>
+						</ul>
+					</div>
+					<div class="body7min2">
+						<p>优购客服</p>
+						<ul id="ul1">
+							<li>在线咨询</li>
+							<li>微信客服</li>
+						</ul>
+					</div>
+				</div>
+				<div id="body7min2">
+					<div id="body7min3">
+						<ul>
+							<li>关于优购</li>
+							<li>|</li>
+							<li>集团采购</li>
+							<li>|</li>
+							<li>招贤纳士</li>
+							<li>|</li>
+							<li>手机优购</li>
+							<li>|</li>
+							<li>联系我们</li>
+							<li>|</li>
+							<li>友情链接</li>
+						</ul>
+					</div>
+					<div id="body7min4">
+						Copyright&copy;2018-Forever Like_Fried_Rice Technology Co., Ltd. 
+						粤ICP备09070608号-4 炒饼最好吃!经营许可证： 粤 B2-20090203   
+						深公网安备：4403101910665 粤公网安备 44030502000017号
+					</div>
+				</div>
+			</div>
+			<div id="fixedfoot">
+				<a href="#top"><span>︽</span></a>
+			</div>
+		</div>
+	</body>
+</html>

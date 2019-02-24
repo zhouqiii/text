@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<style type="text/css"> 
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			#p1{
+				font-size: 12px;
+				margin-left: 50px;
+				margin-top: 30px;
+			}
+			#d1{
+				display: block;
+			}
+			#div1{
+				width: 90%;
+				height: 670px;
+				/*background-color: black;*/
+				margin-left: 5%;
+				margin-top: 50px;
+			}
+			.div1{
+				width: 66px;
+				height: 66px;
+				border: 1px solid #999999;
+				margin-top: 5px;
+			}
+			.im1{
+				width: 66px;
+				height: 66px;
+				display: block;
+				
+			}
+			.im3{
+				width: 66px;
+				height: 66px;
+				display:none;
+				
+			}
+			#im1.1{
+				display: block;
+			}
+			#im2.1{
+				display: none;
+			}
+			#im3.1{
+				display: none;
+			}
+			#im4.1{
+				display: none;
+			}
+			#im5.1{
+				display: none;
+			}
+			#im6.1{
+				display: none;
+			}
+			#im6.1{
+				display: none;
+			}
+			.im2{
+				width: 480px;
+				height: 480px;
+				display: none;
+			}
+			.im4{
+				display: none;
+			}
+			#div2{
+				position: absolute;
+				width: 480px;
+				height: 480px;
+				top: 96px;
+				left: 200px;
+			}
+			#div3{
+				width: 585px;
+				height: 670px;
+				position: absolute;
+				top: 96px;
+				left: 680px;
+			}
+			#div4{
+				width: 142px;
+				height: 72px;
+				margin-left:50px ;
+			}
+			.d1{
+				width: 50px;
+				height: 22px;
+				border: 1px solid #999999;
+				text-align: center;
+			}
+			#im1{
+				border: 1px solid black;
+			}
+			 #lay{  
+	            background:#fff;  
+	            border:1px solid gray;  
+	            position: absolute;  
+	            top:0px;  
+	            left:0px;  
+	            opacity:0.5;  
+	            /*display:none;*/  
+	            filter:alpha(opacity=50);  
+        	} 
+        	#bigBox{  
+	            height:480px;   
+	            width:480px;  
+	            position: absolute;  
+	            top:96px;
+	            left:680px;  
+	            overflow: hidden;  
+	            /*display:none;*/  
+	            border: 1px solid gray;  
+	            z-index: 100;
+        }  /*放大镜*/
+       .td1{
+       	border: 1px solid #999999;
+       }
+       #td1{
+       	border:1px solid #333333;
+       }
+       .td1:hover{
+       	border: 1px solid #333333;
+       }
+       .d1:hover{
+       		border: 1px solid #333333;
+       	}
+       	#div5{
+       		width: 90%;
+       		margin-left: 5%;
+       		height: 13000px;
+       		/*background-color: blue;*/
+       		border: 1px solid white;
+       	}
+       	.l1{
+       		float: left;
+       		margin-left: 80px;
+       		color: #CCCCCC;
+       	}
+       	.l2{
+       		float: left;
+       		margin-left: 60px;
+       		color: #CCCCCC;
+       	}
+       	.d2{
+       		height: 30px;
+       		font-size: 13px;
+       		color: #CCCCCC;
+       	}
+		</style>
+		<script type="text/javascript">
+			var fixed = 0;
+			function display1(){
+				fixed = 0;
+				document.getElementById("im1").style.borderColor = "black";
+				document.getElementById("im1.1").style.display = "block";
+				document.getElementById("i1").style.display = "block";
+				document.getElementById("d1").style.display = "block";
+				
+				document.getElementById("im2").style.borderColor = "#999999";
+				document.getElementById("im2.1").style.display = "none";
+				document.getElementById("i2").style.display = "none";
+				document.getElementById("d2").style.display = "none";
+				document.getElementById("im3").style.borderColor = "#999999";
+				document.getElementById("im3.1").style.display = "none";
+				document.getElementById("i3").style.display = "none";
+				document.getElementById("d3").style.display = "none";
+				document.getElementById("im4").style.borderColor = "#999999";
+				document.getElementById("im4.1").style.display = "none";
+				document.getElementById("i4").style.display = "none";
+				document.getElementById("d4").style.display = "none";
+				document.getElementById("im5").style.borderColor = "#999999";
+				document.getElementById("im5.1").style.display = "none";
+				document.getElementById("i5").style.display = "none";
+				document.getElementById("d5").style.display = "none";
+				document.getElementById("im6").style.borderColor = "#999999";
+				document.getElementById("im6.1").style.display = "none";
+				document.getElementById("i6").style.display = "none";
+				document.getElementById("d6").style.display = "none";
+				document.getElementById("im7").style.borderColor = "#999999";
+				document.getElementById("im7.1").style.display = "none";
+				document.getElementById("i7").style.display = "none";
+				document.getElementById("d7").style.display = "none";
+				
+			}
+			function display2(){
+				fixed = 1;
+				document.getElementById("im2").style.borderColor = "black";
+				document.getElementById("im2.1").style.display = "block"
+				document.getElementById("i2").style.display = "block";
+				document.getElementById("d2").style.display = "block";
+
+				
+				document.getElementById("im1").style.borderColor = "#999999";
+				document.getElementById("im1.1").style.display = "none";
+				document.getElementById("i1").style.display = "none";
+				document.getElementById("d1").style.display = "none";
+				document.getElementById("im3").style.borderColor = "#999999";
+				document.getElementById("im3.1").style.display = "none";
+				document.getElementById("i3").style.display = "none";
+				document.getElementById("d3").style.display = "none";
+				document.getElementById("im4").style.borderColor = "#999999";
+				document.getElementById("im4.1").style.display = "none";
+				document.getElementById("i4").style.display = "none";
+				document.getElementById("d4").style.display = "none";
+				document.getElementById("im5").style.borderColor = "#999999";
+				document.getElementById("im5.1").style.display = "none";
+				document.getElementById("i5").style.display = "none";
+				document.getElementById("d5").style.display = "none";
+				document.getElementById("im6").style.borderColor = "#999999";
+				document.getElementById("im6.1").style.display = "none";
+				document.getElementById("i6").style.display = "none";
+				document.getElementById("d6").style.display = "none";
+				document.getElementById("im7").style.borderColor = "#999999";
+				document.getElementById("im7.1").style.display = "none";
+				document.getElementById("i7").style.display = "none";
+				document.getElementById("d7").style.display = "none";
+				
+			}
+			function display3(){
+				fixed = 2;
+				document.getElementById("im3").style.borderColor = "black";
+				document.getElementById("im3.1").style.display = "block";
+				document.getElementById("i3").style.display = "block";
+				document.getElementById("d3").style.display = "block";
+				
+				document.getElementById("im1").style.borderColor = "#999999";
+				document.getElementById("im1.1").style.display = "none";
+				document.getElementById("i1").style.display = "none";
+				document.getElementById("d1").style.display = "none";
+				document.getElementById("im2").style.borderColor = "#999999";
+				document.getElementById("im2.1").style.display = "none";
+				document.getElementById("i2").style.display = "none";
+				document.getElementById("d2").style.display = "none";
+				document.getElementById("im4").style.borderColor = "#999999";
+				document.getElementById("im4.1").style.display = "none";
+				document.getElementById("i4").style.display = "none";
+				document.getElementById("d4").style.display = "none";
+				document.getElementById("im5").style.borderColor = "#999999";
+				document.getElementById("im5.1").style.display = "none";
+				document.getElementById("i5").style.display = "none";
+				document.getElementById("d5").style.display = "none";
+				document.getElementById("im6").style.borderColor = "#999999";
+				document.getElementById("im6.1").style.display = "none";
+				document.getElementById("i6").style.display = "none";
+				document.getElementById("d6").style.display = "none";
+				document.getElementById("im7").style.borderColor = "#999999";
+				document.getElementById("im7.1").style.display = "none";
+				document.getElementById("i7").style.display = "none";
+				document.getElementById("d7").style.display = "none";
+			}
+			function display4(){
+				fixed = 3;
+				document.getElementById("im4").style.borderColor = "black";
+				document.getElementById("im4.1").style.display = "block";
+				document.getElementById("i4").style.display = "block";
+				document.getElementById("d4").style.display = "block";
+				
+				document.getElementById("im1").style.borderColor = "#999999";
+				document.getElementById("im1.1").style.display = "none";
+				document.getElementById("i1").style.display = "none";
+				document.getElementById("d1").style.display = "none";
+				document.getElementById("im3").style.borderColor = "#999999";
+				document.getElementById("im3.1").style.display = "none";
+				document.getElementById("i3").style.display = "none";
+				document.getElementById("d3").style.display = "none";
+				document.getElementById("im2").style.borderColor = "#999999";
+				document.getElementById("im2.1").style.display = "none";
+				document.getElementById("i2").style.display = "none";
+				document.getElementById("d2").style.display = "none";
+				document.getElementById("im5").style.borderColor = "#999999";
+				document.getElementById("im5.1").style.display = "none";
+				document.getElementById("i5").style.display = "none";
+				document.getElementById("d5").style.display = "none";
+				document.getElementById("im6").style.borderColor = "#999999";
+				document.getElementById("im6.1").style.display = "none";
+				document.getElementById("i6").style.display = "none";
+				document.getElementById("d6").style.display = "none";
+				document.getElementById("im7").style.borderColor = "#999999";
+				document.getElementById("im7.1").style.display = "none";
+				document.getElementById("i7").style.display = "none";
+				document.getElementById("d7").style.display = "none";
+			}
+			function display5(){
+				fixed = 4;
+				document.getElementById("im5").style.borderColor = "black";
+				document.getElementById("im5.1").style.display = "block";
+				document.getElementById("i5").style.display = "block";
+				document.getElementById("d5").style.display = "block";
+				
+				document.getElementById("im1").style.borderColor = "#999999";
+				document.getElementById("im1.1").style.display = "none";
+				document.getElementById("i1").style.display = "none";
+				document.getElementById("d1").style.display = "none";
+				document.getElementById("im3").style.borderColor = "#999999";
+				document.getElementById("im3.1").style.display = "none";
+				document.getElementById("i3").style.display = "none";
+				document.getElementById("d3").style.display = "none";
+				document.getElementById("im4").style.borderColor = "#999999";
+				document.getElementById("im4.1").style.display = "none";
+				document.getElementById("i4").style.display = "none";
+				document.getElementById("d4").style.display = "none";
+				document.getElementById("im2").style.borderColor = "#999999";
+				document.getElementById("im2.1").style.display = "none";
+				document.getElementById("i2").style.display = "none";
+				document.getElementById("d2").style.display = "none";
+				document.getElementById("im6").style.borderColor = "#999999";
+				document.getElementById("im6.1").style.display = "none";
+				document.getElementById("i6").style.display = "none";
+				document.getElementById("d6").style.display = "none";
+				document.getElementById("im7").style.borderColor = "#999999";
+				document.getElementById("im7.1").style.display = "none";
+				document.getElementById("i7").style.display = "none";
+				document.getElementById("d7").style.display = "none";
+			}
+			function display6(){
+				fixed = 5;
+				document.getElementById("im6").style.borderColor = "black";
+				document.getElementById("im6.1").style.display = "block";
+				document.getElementById("i6").style.display = "block";
+				document.getElementById("d6").style.display = "block";
+				
+				document.getElementById("im1").style.borderColor = "#999999";
+				document.getElementById("im1.1").style.display = "none";
+				document.getElementById("i1").style.display = "none";
+				document.getElementById("d1").style.display = "none";
+				document.getElementById("im3").style.borderColor = "#999999";
+				document.getElementById("im3.1").style.display = "none";
+				document.getElementById("i3").style.display = "none";
+				document.getElementById("d3").style.display = "none";
+				document.getElementById("im4").style.borderColor = "#999999";
+				document.getElementById("im4.1").style.display = "none";
+				document.getElementById("i4").style.display = "none";
+				document.getElementById("d4").style.display = "none";
+				document.getElementById("im5").style.borderColor = "#999999";
+				document.getElementById("im5.1").style.display = "none";
+				document.getElementById("i5").style.display = "none";
+				document.getElementById("d5").style.display = "none";
+				document.getElementById("im2").style.borderColor = "#999999";
+				document.getElementById("im2.1").style.display = "none";
+				document.getElementById("i2").style.display = "none";
+				document.getElementById("d2").style.display = "none";
+				document.getElementById("im7").style.borderColor = "#999999";
+				document.getElementById("im7.1").style.display = "none";
+				document.getElementById("i7").style.display = "none";
+				document.getElementById("d7").style.display = "none";
+			}
+			function display7(){
+				fixed = 6;
+				document.getElementById("im7").style.borderColor = "black";
+				document.getElementById("im7.1").style.display = "block";
+				document.getElementById("i7").style.display = "block";
+				document.getElementById("d7").style.display = "block";
+				
+				document.getElementById("im1").style.borderColor = "#999999";
+				document.getElementById("im1.1").style.display = "none";
+				document.getElementById("i1").style.display = "none";
+				document.getElementById("d1").style.display = "none";
+				document.getElementById("im3").style.borderColor = "#999999";
+				document.getElementById("im3.1").style.display = "none";
+				document.getElementById("i3").style.display = "none";
+				document.getElementById("d3").style.display = "none";
+				document.getElementById("im4").style.borderColor = "#999999";
+				document.getElementById("im4.1").style.display = "none";
+				document.getElementById("i4").style.display = "none";
+				document.getElementById("d4").style.display = "none";
+				document.getElementById("im5").style.borderColor = "#999999";
+				document.getElementById("im5.1").style.display = "none";
+				document.getElementById("i5").style.display = "none";
+				document.getElementById("d5").style.display = "none";
+				document.getElementById("im6").style.borderColor = "#999999";
+				document.getElementById("im6.1").style.display = "none";
+				document.getElementById("i6").style.display = "none";
+				document.getElementById("d6").style.display = "none";
+				document.getElementById("im2").style.borderColor = "#999999";
+				document.getElementById("im2.1").style.display = "none";
+				document.getElementById("i2").style.display = "none";
+				document.getElementById("d2").style.display = "none";
+			}
+			
+			function display8()
+			{
+				document.getElementById("bigBox").style.display = "block";
+				document.getElementById("lay").style.display = "block"
+				
+			}
+			function disappear1(){
+				document.getElementById("bigBox").style.display = "none";
+				document.getElementById("lay").style.display = "none";
+			}
+			
+			function chance(){  
+                var Box = document.getElementById("div2");  /*获取原图盒子*/
+                var bigBox = document.getElementById("bigBox");/*放大图片的盒子*/
+                var bigbox = bigBox.children[fixed];  
+                var lay = document.getElementById("lay");  /*放大镜*/
+                //鼠标移入时，将放大镜和bigBox显示出来  
+                Box.onmousemove = function(e){  
+                    e = e || event;//事件源的兼容问题  
+                    var scale = 3;//图片的放缩比例  
+                    //将鼠标放到放大镜的中间  
+                    var x = e.clientX - lay.offsetWidth/0.58;  
+                    var y = e.clientY - lay.offsetHeight/0.8;  
+                    //将放大镜的宽高与盒子的宽高结合起来按比例放缩  
+                    lay.style.width = parseInt(Box.offsetWidth / scale )+ "px";  
+                    lay.style.height = parseInt(Box.offsetHeight / scale)+ "px";  
+                    //设置大盒子的宽高  
+                    bigbox.style.width = Box.offsetWidth * scale + "px";  
+                    bigbox.style.height = Box.offsetHeight * scale + "px";  
+                    if(x < 0){  
+                        x = 0;//左边界的判断，当超出时将x置为0;  
+                    }  
+                    //右边界的判断，当超出时将x置为Box的宽度减去放大镜的宽度;  
+                    if( x >= Box.offsetWidth - lay.offsetWidth){  
+                        x = Box.offsetWidth - lay.offsetWidth;  
+                    }  
+                    //下边界的判断，当超出时将y置为Box的高度减去放大镜的高度;  
+                    if( y >= Box.offsetHeight - lay.offsetHeight){  
+                        y = Box.offsetHeight - lay.offsetHeight;  
+                    }  
+                    if(y < 0){  
+                        y = 0;//上边界的判断，当超出时将y置为0;  
+                    }  
+                    lay.style.left = x + "px";  
+                    lay.style.top = y + "px";  
+                    //同比例放缩，大的盒子图片的放缩比例，当小盒子向右移动的时候，大盒子向左移动同等的比例的宽高，方向是相反的  
+                     var left = lay.offsetLeft * scale;  
+                     var top  = lay.offsetTop * scale ;  
+                    bigbox.style.marginLeft =(left * (-1)) + "px";  
+                    bigbox.style.marginTop =(top * (-1))+ "px";  
+                }  
+            }  
+        function display9(){
+        	document.getElementById("td1").style.borderColor = "#333333"
+        	document.getElementById("td2").style.borderColor = "#999999"
+        	
+        	var j = document.getElementsByName("c1");
+        	var m = document.getElementsByName("c2");
+        	document.getElementById("d1").style.display = "block";
+        	document.getElementById("d8").style.display = "none";
+        	for(var i = 0; i < j.length; i++)
+        	{
+        		j[i].style.display = "block";
+        		m[i].style.display = "none"
+        	}
+        }
+        function display10(){
+        	document.getElementById("td2").style.borderColor = "#333333"
+        	document.getElementById("td1").style.borderColor = "#999999"
+        	document.getElementById("d1").style.display = "none";
+        	document.getElementById("d8").style.display = "block";
+        	var j = document.getElementsByName("c1");
+        	var m = document.getElementsByName("c2");
+        	for(var i = 0; i < j.length; i++)
+        	{
+        		j[i].style.display = "none";
+        		m[i].style.display = "block"
+        	}
+        }
+        function change1(){
+        	var i = document.getElementById("text1").value;
+        	i++;
+        	document.getElementById("text1").value = i;
+        }
+        function change2(){
+        	var i = document.getElementById("text1").value;
+        	if(i > 1)
+        	{
+        		i--;
+        		document.getElementById("text1").value = i;
+        	}
+        }
+        function display11(){
+        	fixed = 7;
+        	document.getElementById("im1").style.borderColor = "black";
+				document.getElementById("im8.1").style.display = "block";
+				document.getElementById("i1").style.display = "block";
+				document.getElementById("d8").style.display = "block";
+				
+				document.getElementById("im2").style.borderColor = "#999999";
+				document.getElementById("im9.1").style.display = "none";
+				document.getElementById("i2").style.display = "none";
+				document.getElementById("d9").style.display = "none";
+				document.getElementById("im3").style.borderColor = "#999999";
+				document.getElementById("im10.1").style.display = "none";
+				document.getElementById("i3").style.display = "none";
+				document.getElementById("d10").style.display = "none";
+				document.getElementById("im4").style.borderColor = "#999999";
+				document.getElementById("im11.1").style.display = "none";
+				document.getElementById("i4").style.display = "none";
+				document.getElementById("d11").style.display = "none";
+				document.getElementById("im5").style.borderColor = "#999999";
+				document.getElementById("im12.1").style.display = "none";
+				document.getElementById("i5").style.display = "none";
+				document.getElementById("d12").style.display = "none";
+				document.getElementById("im6").style.borderColor = "#999999";
+				document.getElementById("im13.1").style.display = "none";
+				document.getElementById("i6").style.display = "none";
+				document.getElementById("d13").style.display = "none";
+				document.getElementById("im7").style.borderColor = "#999999";
+				document.getElementById("im7.1").style.display = "none";
+				document.getElementById("i7").style.display = "none";
+				document.getElementById("d7").style.display = "none";
+        }
+        function display12(){
+        	fixed = 8;
+        	document.getElementById("im2").style.borderColor = "black";
+				document.getElementById("im9.1").style.display = "block"
+				document.getElementById("i2").style.display = "block";
+				document.getElementById("d9").style.display = "block";
+
+				
+				document.getElementById("im1").style.borderColor = "#999999";
+				document.getElementById("im8.1").style.display = "none";
+				document.getElementById("i1").style.display = "none";
+				document.getElementById("d8").style.display = "none";
+				document.getElementById("im3").style.borderColor = "#999999";
+				document.getElementById("im10.1").style.display = "none";
+				document.getElementById("i3").style.display = "none";
+				document.getElementById("d10").style.display = "none";
+				document.getElementById("im4").style.borderColor = "#999999";
+				document.getElementById("im11.1").style.display = "none";
+				document.getElementById("i4").style.display = "none";
+				document.getElementById("d11").style.display = "none";
+				document.getElementById("im5").style.borderColor = "#999999";
+				document.getElementById("im12.1").style.display = "none";
+				document.getElementById("i5").style.display = "none";
+				document.getElementById("d12").style.display = "none";
+				document.getElementById("im6").style.borderColor = "#999999";
+				document.getElementById("im13.1").style.display = "none";
+				document.getElementById("i6").style.display = "none";
+				document.getElementById("d13").style.display = "none";
+				document.getElementById("im7").style.borderColor = "#999999";
+				document.getElementById("im7.1").style.display = "none";
+				document.getElementById("i7").style.display = "none";
+				document.getElementById("d7").style.display = "none";
+        }
+        function display13(){
+        	fixed = 9;
+        	document.getElementById("im3").style.borderColor = "black";
+				document.getElementById("im10.1").style.display = "block";
+				document.getElementById("i3").style.display = "block";
+				document.getElementById("d10").style.display = "block";
+				
+				document.getElementById("im1").style.borderColor = "#999999";
+				document.getElementById("im8.1").style.display = "none";
+				document.getElementById("i1").style.display = "none";
+				document.getElementById("d8").style.display = "none";
+				document.getElementById("im2").style.borderColor = "#999999";
+				document.getElementById("im9.1").style.display = "none";
+				document.getElementById("i2").style.display = "none";
+				document.getElementById("d9").style.display = "none";
+				document.getElementById("im4").style.borderColor = "#999999";
+				document.getElementById("im11.1").style.display = "none";
+				document.getElementById("i4").style.display = "none";
+				document.getElementById("d11").style.display = "none";
+				document.getElementById("im5").style.borderColor = "#999999";
+				document.getElementById("im12.1").style.display = "none";
+				document.getElementById("i5").style.display = "none";
+				document.getElementById("d12").style.display = "none";
+				document.getElementById("im6").style.borderColor = "#999999";
+				document.getElementById("im13.1").style.display = "none";
+				document.getElementById("i6").style.display = "none";
+				document.getElementById("d13").style.display = "none";
+				document.getElementById("im7").style.borderColor = "#999999";
+				document.getElementById("im7.1").style.display = "none";
+				document.getElementById("i7").style.display = "none";
+				document.getElementById("d7").style.display = "none";
+        }
+        function display14(){
+        	fixed = 10;
+        	document.getElementById("im4").style.borderColor = "black";
+				document.getElementById("im11.1").style.display = "block";
+				document.getElementById("i4").style.display = "block";
+				document.getElementById("d11").style.display = "block";
+				
+				document.getElementById("im1").style.borderColor = "#999999";
+				document.getElementById("im8.1").style.display = "none";
+				document.getElementById("i1").style.display = "none";
+				document.getElementById("d8").style.display = "none";
+				document.getElementById("im3").style.borderColor = "#999999";
+				document.getElementById("im10.1").style.display = "none";
+				document.getElementById("i3").style.display = "none";
+				document.getElementById("d10").style.display = "none";
+				document.getElementById("im2").style.borderColor = "#999999";
+				document.getElementById("im9.1").style.display = "none";
+				document.getElementById("i2").style.display = "none";
+				document.getElementById("d9").style.display = "none";
+				document.getElementById("im5").style.borderColor = "#999999";
+				document.getElementById("im12.1").style.display = "none";
+				document.getElementById("i5").style.display = "none";
+				document.getElementById("d12").style.display = "none";
+				document.getElementById("im6").style.borderColor = "#999999";
+				document.getElementById("im13.1").style.display = "none";
+				document.getElementById("i6").style.display = "none";
+				document.getElementById("d13").style.display = "none";
+				document.getElementById("im7").style.borderColor = "#999999";
+				document.getElementById("im7.1").style.display = "none";
+				document.getElementById("i7").style.display = "none";
+				document.getElementById("d7").style.display = "none";
+        }
+        function display15(){
+        	fixed = 11;
+        	document.getElementById("im5").style.borderColor = "black";
+				document.getElementById("im12.1").style.display = "block";
+				document.getElementById("i5").style.display = "block";
+				document.getElementById("d12").style.display = "block";
+				
+				document.getElementById("im1").style.borderColor = "#999999";
+				document.getElementById("im8.1").style.display = "none";
+				document.getElementById("i1").style.display = "none";
+				document.getElementById("d8").style.display = "none";
+				document.getElementById("im3").style.borderColor = "#999999";
+				document.getElementById("im10.1").style.display = "none";
+				document.getElementById("i3").style.display = "none";
+				document.getElementById("d10").style.display = "none";
+				document.getElementById("im4").style.borderColor = "#999999";
+				document.getElementById("im11.1").style.display = "none";
+				document.getElementById("i4").style.display = "none";
+				document.getElementById("d11").style.display = "none";
+				document.getElementById("im2").style.borderColor = "#999999";
+				document.getElementById("im9.1").style.display = "none";
+				document.getElementById("i2").style.display = "none";
+				document.getElementById("d9").style.display = "none";
+				document.getElementById("im6").style.borderColor = "#999999";
+				document.getElementById("im13.1").style.display = "none";
+				document.getElementById("i6").style.display = "none";
+				document.getElementById("d13").style.display = "none";
+				document.getElementById("im7").style.borderColor = "#999999";
+				document.getElementById("im7.1").style.display = "none";
+				document.getElementById("i7").style.display = "none";
+				document.getElementById("d7").style.display = "none";
+        }
+        function display16(){
+        	fixed = 12;
+        	document.getElementById("im6").style.borderColor = "black";
+				document.getElementById("im13.1").style.display = "block";
+				document.getElementById("i6").style.display = "block";
+				document.getElementById("d13").style.display = "block";
+				
+				document.getElementById("im1").style.borderColor = "#999999";
+				document.getElementById("im8.1").style.display = "none";
+				document.getElementById("i1").style.display = "none";
+				document.getElementById("d8").style.display = "none";
+				document.getElementById("im3").style.borderColor = "#999999";
+				document.getElementById("im10.1").style.display = "none";
+				document.getElementById("i3").style.display = "none";
+				document.getElementById("d10").style.display = "none";
+				document.getElementById("im4").style.borderColor = "#999999";
+				document.getElementById("im11.1").style.display = "none";
+				document.getElementById("i4").style.display = "none";
+				document.getElementById("d11").style.display = "none";
+				document.getElementById("im5").style.borderColor = "#999999";
+				document.getElementById("im12.1").style.display = "none";
+				document.getElementById("i5").style.display = "none";
+				document.getElementById("d12").style.display = "none";
+				document.getElementById("im2").style.borderColor = "#999999";
+				document.getElementById("im9.1").style.display = "none";
+				document.getElementById("i2").style.display = "none";
+				document.getElementById("d9").style.display = "none";
+				document.getElementById("im7").style.borderColor = "#999999";
+				document.getElementById("im7.1").style.display = "none";
+				document.getElementById("i7").style.display = "none";
+				document.getElementById("d7").style.display = "none";
+        }
+        function display17(){
+        	document.getElementById("text2").style.display = "block";
+        	document.getElementById("bu6").style.display = "block";
+        	document.getElementById("bu7").style.display = "block";
+        }
+        function display18(){
+        	document.getElementById("text2").value ="";
+        	alert("您的评论已提交！");
+        }
+        function display19(){
+        	document.getElementById("text2").value = "";
+        	document.getElementById("text2").style.display = "none";
+        	document.getElementById("bu6").style.display = "none";
+        	document.getElementById("bu7").style.display = "none";
+        }
+		</script>
+	</head>
+	<body>
+		<div id="body1">
+			<p id="p1">您当前的位置：首页>运动户外>运动>专业运动>跑步</p>
+			<div id="div1">
+				<div class="div1" id="im1">
+					<img src="img/61.jpg" class="im1"  name="c1"onmouseover="display1()"/>
+					<img src="img/69.jpg" class="im3" name="c2" onmouseover="display11()"/>
+				</div>
+					<i id="i1" class="fa fa-caret-right"  style="position: absolute; top: 120px; left: 145px;"></i>
+				<div class="div1" id="im2">
+					<img src="img/62.jpg"class="im1"name="c1" onmouseover="display2()" />
+					<img src="img/70.jpg" class="im3" name="c2" onmouseover="display12()"/>
+				</div>
+				<i id="i2" class="fa fa-caret-right"  style="position: absolute; top: 190px; left: 145px; display: none;"></i>
+				<div class="div1" id="im3">
+					<img src="img/63.jpg" class="im1"name="c1" onmouseover="display3()" />
+					<img src="img/71.jpg" class="im3" name="c2" onmouseover="display13()"/>
+				</div>
+				<i id="i3" class="fa fa-caret-right"  style="position: absolute; top: 270px; left: 145px; display: none;"></i>
+				<div class="div1" id="im4">
+					<img src="img/64.jpg" class="im1"name="c1" onmouseover="display4()"/>
+					<img src="img/72.jpg" class="im3" name="c2" onmouseover="display14()"/>
+				</div>
+				<i id="i4" class="fa fa-caret-right" style="position: absolute; top: 340px; left: 145px; display: none;"></i>
+				<div class="div1" id="im5">
+					<img src="img/65.jpg" class="im1" name="c1" onmouseover="display5()"/>
+					<img src="img/73.jpg" class="im3" name="c2" onmouseover="display15()"/>
+				</div>
+				<i id="i5" class="fa fa-caret-right"  style="position: absolute; top: 410px; left: 145px; display: none;"></i>
+				<div class="div1" id="im6">
+					<img src="img/66.jpg" class="im1" name="c1" onmouseover="display6()"/>
+					<img src="img/74.jpg" class="im3" name="c2" onmouseover="display16()"/>
+				</div>
+				<i id="i6" class="fa fa-caret-right"  style="position: absolute; top: 485px; left: 145px; display: none;"></i>
+				<div class="div1" id="im7">
+					<img src="img/67.jpg" class="im1" style="display: block;" onmouseover="display7()"/>
+				</div>
+				<i id="i7" class="fa fa-caret-right" style="position: absolute; top: 555px; left: 145px; display: none;"></i>
+				<div id="div2" onmouseover="display8()" onmouseout="disappear1()">
+					<img src="img/61.1.jpg" id="d1" class="im2"   onmouseover="chance()"/>
+					<img src="img/62.1.jpg" id="d2" class="im2"  onmouseover="chance()"/>
+					<img src="img/63.1.jpg" id="d3" class="im2"   onmouseover="chance()"/>
+					<img src="img/64.1.jpg" id="d4" class="im2"  onmouseover="chance()"/>
+					<img src="img/65.1.jpg" id="d5" class="im2" onmouseover="chance()"/>
+					<img src="img/66.1.jpg" id="d6" class="im2" onmouseover="chance()"/>
+					<img src="img/67.1.jpg" id="d7" class="im2" onmouseover="chance()"/>  
+					<img src="img/69.1.jpg" id="d8" class="im4" onmouseover="chance()"/>
+					<img src="img/70.1.jpg" id="d9" class="im4"  onmouseover="chance()"/>
+					<img src="img/71.1.jpg" id="d10" class="im4" onmouseover="chance()"/>
+					<img src="img/72.1.jpg" id="d11" class="im4" onmouseover="chance()"/>
+					<img src="img/73.1.jpg" id="d12" class="im4" onmouseover="chance()"/>
+					<img src="img/74.1.jpg" id="d13" class="im4" onmouseover="chance()"/>
+					 <div id="lay"></div>
+				</div>
+				 <div id="bigBox" style="display: none;">  
+            		<img src="img/61.1.jpg" id="im1.1" />
+            		<img src="img/62.1.jpg" id="im2.1" />
+            		<img src="img/63.1.jpg" id="im3.1" />
+            		<img src="img/64.1.jpg" id="im4.1" />
+            		<img src="img/65.1.jpg" id="im5.1" />
+            		<img src="img/66.1.jpg" id="im6.1" />
+            		<img src="img/67.1.jpg" id="im7.1" />
+            		<img src="img/69.1.jpg" id="im8.1" />
+            		<img src="img/70.1.jpg" id="im9.1" />
+            		<img src="img/71.1.jpg" id="im10.1" />
+            		<img src="img/72.1.jpg" id="im11.1" />
+            		<img src="img/73.1.jpg" id="im12.1" />
+            		<img src="img/74.1.jpg" id="im13.1" />
+       			 </div>  <!--放大的图片-->
+				<div id="div3">
+					<div id="div4" align="center">
+						<img src="img/68.jpg" width="112px" height="72px" />
+					</div>
+					<h4 style="font-size: 16px; font-weight: normal;margin-top: 25px; margin-left: 30px;">adidas阿迪达斯2018男子COSMIC 2PE跑步鞋B44880</h4>
+					<div style="margin-left: 30px; margin-top: 50px; ">
+					<span >￥<strong style="font-size: 30px;">299</strong><s>￥499</s></span>
+					</div>
+					<div style="margin-left: 30px; margin-top: 30px; ">
+						<span style="background-color: black; color: white; font-size: 12px;">限时抢</span><span style="font-size: 12px; margin-left: 20px;">还剩小时分钟秒</span>
+					</div>
+					<hr  style="margin-top: 30px; border: 1px dashed #999999;"/>
+					<table border="0" style="margin-left: 30px; margin-top: 20px;" cellspacing="10px">
+						<tr>
+							<td valign="top" style="font-size: 13px;">颜色:</td>
+							<td class="td1" id="td1">
+								<img src="img/66.jpg" width="40px" height="40px" onclick="display9()"/>
+							</td>
+							<td class="td1" id="td2">
+								<img src="img/74.jpg" width="40px" height="40px" onclick="display10()"/>
+							</td>
+						</tr>
+					</table>
+					<table border="0" style="margin-left: 30px; margin-top: 20px;" cellspacing="5px">
+						<tr>
+							<td rowspan="2"  style=" font-size: 13px; width: 50px; height: 22px;" valign="top">尺码:</td>
+							<td  class="d1">39</td>
+							<td  class="d1">40</td>
+							<td  class="d1">40.5</td>
+							<td class="d1">41</td>
+							<td class="d1">42</td>
+						</tr>
+						<tr>
+							<td class="d1">42.5</td>
+							<td class="d1">43</td>
+							<td class="d1">44</td>
+							<td class="d1">44.5</td>
+							<td class="d1">45</td>
+						</tr>
+					</table>
+					<form action="#" method="get">
+					<table border="0" style="margin-left: 30px; margin-top: 20px; height: 35px;" cellspacing="5px">
+						<tr>
+							<td rowspan="2" style="font-size: 13px; " valign="top">数量:</td>
+							<td rowspan="2" height="35px" width="62px">
+								<input type="text" name="text1" id="text1" value="1" readonly="readonly" style="width: 62px; height: 32px;" />
+							</td>
+							<td valign="bottom">
+								<input type="button" name="bu1" id="bu1" value="∧"  style="color: white; background-color: #333333; width: 24px; height: 18px;" onclick="change1()"/>
+							</td>
+						</tr>
+						<tr>
+							<td valign="top">
+								<input type="button" name="bu1" id="bu2" value="∨"  style="color: white; background-color: #333333;width: 24px; height: 18px;" onclick="change2()" />
+							</td>
+						</tr>
+					</table>
+					<table border="0" style="margin-left: 30px; margin-top: 20px;">
+						<tr>
+							<td>
+								<input type="button" name="b2" id="bu3" value="加入购物袋" onclick="window.open('购物车有商品.html')" style="width: 224px; height: 48px; font-size: 18px; background-color: black; color: white;border: none;" />
+							</td>
+							<td>
+								<input type="button" name="b2" id="bu4" value="立即购买" style="width: 224px; height: 48px; font-size: 18px; background: none; color: black; border: 1px solid black;"/>
+							</td>
+						</tr>
+					</table>
+					</form>
+					<table border="0" style="margin-left: 30px; margin-top: 20px; font-size: 14px;" cellspacing="15px">
+						<tr>
+							<td><a href="#" style="text-decoration: none; color: #333333;"><i class="fa fa-heart"></i>收藏</a></td>
+							<td><a href="#" style="text-decoration: none;color: #333333;">分享</a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="div5">
+				<div style="width: 120px; height: 130px; margin-top: 10px; margin-left: 78%;">
+					<img src="img/75.jpg" width="120" height="130px"/>
+				</div>
+				<h1 style="font-size: 40px; font-weight: initial; text-align: center; color: #999999;">商品信息</h1>
+				<ul type="none" style="margin-left: 10%; margin-top: 2%; line-height: 80px;">
+					<li class="l1" style="clear: both;">色系：黑色</li>
+					<li class="l1">鞋帮：中帮</li>
+					<li class="l1">适用人群：男子</li>
+					<li class="l1">鞋底材质：其他</li>
+					<li class="l1">性别：男子</li>
+				</ul>
+				<hr style="border: 1px solid #CCCCCC; clear: both; margin-top: 50px;" />
+				<ul type="none" style="margin-left: 10%; margin-top: 5%;">
+					<li class="l2" style="clear: both;">鞋面材质：其他</li>
+					<li class="l2">适应项目：休闲</li>
+					<li class="l2">运动项目：跑步</li>
+					<li class="l2">闭合方式：系带</li>
+					<li class="l2">主要功能：减震防滑</li>
+				</ul>
+				<h1 style="font-size: 40px; font-weight: initial; text-align: center; clear: both; margin-top: 150px; color: #999999;">尺码信息</h1>
+				<table border="0" align="center" width="100%" style="text-align: center; margin-top: 80px;">
+					<tr>
+						<td class="d2">中国码(CHN)	21.5</td>
+						<td class="d2">22</td>
+						<td class="d2">22.5</td>
+						<td class="d2">23</td>
+						<td class="d2">23.5</td>
+						<td class="d2">23.5</td>
+						<td class="d2">24</td>
+						<td class="d2">24.5</td>
+						<td class="d2">25</td>
+						<td class="d2">25.5</td>
+						<td class="d2">26</td>
+						<td class="d2">26.5</td>
+						<td class="d2">26.5</td>
+						<td class="d2">27</td>
+						<td class="d2">27.5</td>
+						<td class="d2">28</td>
+						<td class="d2">28.5</td>
+						<td class="d2">29</td>
+						<td class="d2">29.5</td>
+					</tr>
+					<tr>
+						<td colspan="19" class="d2">
+							<hr style="border: 1px solid #CCCCCC;" />
+						</td>
+					</tr>
+					<tr>
+						<td class="d2">法 码(FR)	35</td>
+						<td class="d2">36</td>
+						<td class="d2">36.5</td>
+						<td class="d2">37</td>
+						<td class="d2">38</td>
+						<td class="d2">38.5</td>
+						<td class="d2">39</td>
+						<td class="d2">40</td>
+						<td class="d2">40.5</td>
+						<td class="d2">41</td>
+						<td class="d2">42</td>
+						<td class="d2">42.5</td>
+						<td class="d2">43</td>
+						<td class="d2">44</td>
+						<td class="d2">44.5</td>
+						<td class="d2">45</td>
+						<td class="d2">46</td>
+						<td class="d2">46.5</td>
+						<td class="d2">47</td>
+					</tr>
+					<tr>
+						<td colspan="19" class="d2">
+							<hr style="border: 1px solid #CCCCCC;" />
+						</td>
+					</tr>
+					<tr>
+						<td class="d2">英国码(UK)	3</td>
+						<td class="d2">3.5</td>
+						<td class="d2">4</td>
+						<td class="d2">4.5</td>
+						<td class="d2">5</td>
+						<td class="d2">5.5</td>
+						<td class="d2">6</td>
+						<td class="d2">6.5</td>
+						<td class="d2">7</td>
+						<td class="d2">7.5</td>
+						<td class="d2">8</td>
+						<td class="d2">8.5</td>
+						<td class="d2">9</td>
+						<td class="d2">9.5</td>
+						<td class="d2">10</td>
+						<td class="d2">10.5</td>
+						<td class="d2">11</td>
+						<td class="d2">11.5</td>
+						<td class="d2">12</td>
+					</tr>
+					<tr>
+						<td colspan="19" class="d2">
+							<hr style="border: 1px solid #CCCCCC;" />
+						</td>
+					</tr>
+				</table>
+				<h1 style="font-size: 40px; font-weight: initial; text-align: center; color: #999999; margin-top: 200px;">商品详情</h1>
+				<div style="width: 790px; height: 1376px; margin-left: 17%;">
+					<img src="img/76.jpg" width="790px" height="1376px" />
+				</div>
+				<div style="width: 790px; height: 538px; margin-left: 17%; margin-top: 20px;">
+					<img src="img/77.jpg" width="790px" height="538px"/>
+				</div>
+				<div style="width: 790px; height: 497px; margin-left: 17%; margin-top: 20px;">
+					<img src="img/78.jpg" height="497px" height="790px" />
+				</div>
+				<div style="width: 790px; height: 545px; margin-left: 17%; margin-top: 20px;">
+					<img src="img/79.jpg" width="790px" height="545px" />
+				</div>
+				<div style="width: 790px; height: 499px; margin-left: 17%; margin-top: 20px;">
+					<img src="img/80.jpg" width="790px" height="499px" />
+				</div>
+				<div style="width: 790px; height: 597px; margin-left: 17%; margin-top: 20px;">
+					<img src="img/81.jpg" width="790px" height="597px" />
+				</div>
+				<div style="width: 790px; height: 717px; margin-left: 17%; margin-top: 20px;">
+					<img src="img/82.jpg" width="790px" height="717px" />
+				</div>
+				<div style="width: 790px; height: 790px; margin-left: 17%; margin-top: 20px;">
+					<img src="img/83.jpg" height="100%" width="100%" />
+				</div>
+				<div style="width: 790px; height: 790px; margin-left: 17%; margin-top: 20px;">
+					<img src="img/84.jpg" width="100%" height="100%" />
+				</div>
+				<div style="width: 790px; height: 790px; margin-left: 17%; margin-top: 20px;">
+					<img src="img/85.jpg" width="100%" height="100%" />
+				</div>
+				<div style="width: 790px; height: 790px; margin-left: 17%; margin-top: 20px;">
+					<img src="img/86.jpg" width="100%" height="100%" />
+				</div>
+				<div style="width: 790px; height: 790px; margin-left: 17%; margin-top: 20px;">
+					<img src="img/87.jpg" width="100%" height="100%" />
+				</div>
+				<div style="width: 990px; height: 400px; margin-left: 8%; margin-top: 100px;">
+					<img src="img/88.jpg" width="100%" height="350px" />
+					<span style="font-size: 13px; color: #999999;">adidas（阿迪达斯），创办于1949年，是德国运动用品制造商阿迪达斯AG成员公司。以其创办人阿道夫·阿迪·达斯勒（Adolf Adi Dassler）命名，阿道夫达斯勒先生，是一位拥有运动员身份和鞋匠技术的德国人。品牌产品主要区分四大系列：经典系列、运动表现系列、休闲生活系列、时尚系列。</span>
+				</div>
+				<div style="width: 90%; height: 200px; margin-top: 100px;">
+					<h1 style="font-size: 40px; font-weight: initial; text-align: center; color: #999999;">商品评价</h1>
+					<h5 style="font-size: 13px; font-weight: initial; color: #999999;">该商品暂无点评。</h5>
+					<span style="font-size: 14px; color: #999999;">赶快来发表第一个点评吧！</span>
+					<input type="button" value="我要写点评论" id="bu5" style="background-color: #333333; color: white;" onclick="display17()" />
+					<textarea id="text2" style="width: 100%; height: 97px; border: 1px solid #CCCCCC; display: none;"></textarea>
+					<input type="button" id="bu6" value="确定" height="10px" width="20px" style="background-color: #CCCCCC; border: 1px solid #CCCCCC; color: #999999; display: none; clear: both; float: left; margin-left: 90%;" onclick="display18()"/>
+					<input type="button" id="bu7" value="取消" height="10px" width="20px" style="background-color: #CCCCCC; border: 1px solid #CCCCCC; color: #999999; display: none;  margin-left: 95%;" onclick="display19()"/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

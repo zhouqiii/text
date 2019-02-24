@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		ul{
+			list-style: none; 
+			color: #333333; 
+			font-size: 15px;
+		}
+			li{
+				float: left;
+				margin-left: 10px;
+			}
+			
+			.l1{
+				margin-left: 10%;
+			}
+			#text1,#text2{
+				width: 10%;
+				height: 25px;
+				border: none;
+				color:#999999;
+			}
+			a{
+				color: #333333;
+				text-decoration: none;
+			}
+			a:hover{
+				text-decoration: underline;
+				font-weight: bolder;
+			}
+			#a4,#a5{
+				color: #999999; 
+				text-decoration: none; 
+				font-size: 13px;
+			}
+			#a4:hover{
+				color: black;
+				text-decoration: underline;
+			}
+			#a5:hover{
+				color: black;
+				text-decoration: underline;
+			}
+			td{
+				text-align: center;
+			}
+			#a2{
+				text-decoration: underline;
+				font-weight: bolder;
+			}
+		</style>
+		<script type="text/javascript">
+		function change1(){
+			document.getElementById("a1").style.textDecoration = "underline";
+			document.getElementById("a1").style.fontWeight = "bolder";
+			document.getElementById("a2").style.textDecoration = "none";
+			document.getElementById("a2").style.fontWeight = "initial";
+			document.getElementById("a3").style.textDecoration = "none";
+			document.getElementById("a3").style.fontWeight = "initial";
+		}
+		function change2(){
+			document.getElementById("a2").style.textDecoration = "underline";
+			document.getElementById("a2").style.fontWeight = "bolder";
+			document.getElementById("a1").style.textDecoration = "none";
+			document.getElementById("a1").style.fontWeight = "initial";
+			document.getElementById("a3").style.textDecoration = "none";
+			document.getElementById("a3").style.fontWeight = "initial";
+		}
+		function change3(){
+			document.getElementById("a3").style.textDecoration = "underline";
+			document.getElementById("a3").style.fontWeight = "bolder";
+			document.getElementById("a1").style.textDecoration = "none";
+			document.getElementById("a1").style.fontWeight = "initial";
+			document.getElementById("a2").style.textDecoration = "none";
+			document.getElementById("a2").style.fontWeight = "initial";
+		}
+		function add(){
+			document.getElementById("a5").style.display = "block";
+			var i = document.getElementById("text1").value;
+			i= parseInt(i);
+			document.getElementById("text1").value = i + 1;
+		}
+		function sub(){
+			if(document.getElementById("text1").value == 1){
+				document.getElementById("a5").style.display = "none";
+			}else{
+				var i = document.getElementById("text1").value
+				i = parseInt(i);
+				document.getElementById("text1").value = i - 1;
+			}
+			
+		}
+		</script>
+	</head>
+	<body>
+		<div style="width: 20%; height: 30px; margin-top: 20px; margin-left: 30px;">
+			<ul>
+				<li>首页></li>
+				<li>运动</li>
+			</ul>
+		</div>
+		<div style="width: 70%; height: 40px; margin-left: 25%; margin-top: 4%; border-bottom: 1px solid #EEEEEE;">
+			<ul>
+				<li class="l1" style="margin-left: 0px;"><a href="new.html"target="main" id="a1" onclick="change1()">新品</a></li>
+				<li class="l1"><a href="list1.html" id="a2" onclick="change2()" target="main">热销</a></li>
+				<li class="l1"><a href="recommend.html" target="main" id="a3" onclick="change3()">推荐</a></li>
+			</ul>
+			<table style="margin-left: 60%;width: 40%; height: 10px;">
+				<tr>
+					<td colspan="4" style="text-align: right;"><input type="text" name="text1" id="text1" readonly="readonly" value="1" />
+					<span style="font-size: 20px; color: #999999;">—</span>
+					<input type="text" name="text1" id="text2" readonly="readonly" value="89"/>
+					<span style="font-size: 15px; color: #999999;">页/</span>
+					</td>
+					<td width="15%"><a href="#" id="a5" style="display: none;" onclick="sub()">上一页></a></td>
+					<td width="15%"><a href="#" id="a4" onclick="add()">下一页></a></td>
+				</tr>
+				
+				
+				
+			</table>
+		</div>
+	</body>
+</html>

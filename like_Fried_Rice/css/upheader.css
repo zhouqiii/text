@@ -1,0 +1,57 @@
+			/*顶部导航*/
+			#upheader{ width: 100%; height:40px;background: #333333;}
+			#upleft{ height: 100%;  float: left;padding-left:11% ;line-height: 40px;font-size: 12px;color: white;}
+			#upleft2{ height: 100%; float: left;padding-left:30px ;line-height: 40px;font-size: 12px;color: white;}
+			#upright ul{ float: right;padding-right: 3%; list-style: none; font-size: 12px;color: white;}
+			#upright ul li{ float:left;padding-left:40px ;}
+				#upright ul li:hover{ color: gray;}	
+				#upheader span:hover{color: gray;}
+				#upright a{ text-decoration: none;color: white;}
+				#upright a:hover{ color: gray;}
+			#li1 span{ float:left;margin-left: 4px;  }
+			#li1 img{ float: left;margin-top: 1px;}
+			#li2 span{ float:left;margin-left: 4px;  }
+			#li2 img{ float: left;margin-top: 0px;}
+				/*鼠标悬浮弹窗二维码*/
+				.yc{ width: 130px;height: 150px; border: 1px solid gainsboro;font-size: 11px;text-align: center;color: gray;
+					display: none;position: fixed;top: 40px;left:100px ;}	
+				.yc img{ margin-top: 10px;margin-left:0px}	
+				#yc2{ position: fixed;top: 40px;left:150px ;}
+			/*个人中心页面的首页链接*/
+			.index1{ color: black;text-decoration: none;}
+			
+			/*上部主题logo*/
+			#upbodyer{ width: 100%; height:230px;background:#FFFFFF; border-bottom: 1px solid gainsboro;}
+			#logo{ width: 100px;height: 94px; margin: 0px auto;padding-top: 67px;}
+			/*上部底部导航*/
+			.upfoot{ width: 100%;height: 50px; }
+			.upfoot ul{list-style: none;font-size: 19px ;color: black;font-weight: bold;margin-top: 0px;}
+			.upfoot ul li{ float: left;padding-left: 65px;line-height: 50px;}
+			#upbodyer a{ text-decoration: none;color: black;}
+			#select{ float: right;margin-right: 6%; height: 25px;width: 250px;margin-top: 20px;}
+			.upfoot img{ float: right;margin-top:-5px;}
+			#text1{ width: 180px; float: right;border-top: none;border-left: none;border-right: none;border-bottom:1px solid ;}
+
+			/*下拉固定导航栏*/
+			#upfixed{ width: 100%; height:50px;background: #FFFFFF;line-height: 50px;
+					margin-top: 0px;border-bottom: 2px solid black; z-index: 10;}
+				#upfixed a{ text-decoration: none; color: black;}
+			.upfixed1{ position: fixed;top: 0px;left: 0px;margin-top: 0px; }
+			#upfixed img { margin-top: 6px;}
+			.upfixed1 ul{ list-style: none;font-size: 19px ;color: black;font-weight: bold;margin-top: 0px;}
+			.upfixed1 ul li{ float: left;padding-left: 50px;line-height: 50px;}
+			#select2{ width: 200px;height: 30px;float: right;margin-right: 6%;}
+			#select2 img{float: right; margin-top: -5px;}
+			#text2{width: 180px; float: right;
+					border-top: none;border-left: none;border-right: none;border-bottom:1px solid ;}
+					
+			/*导航显示*/
+			#show1{ width: 100%; height: 330px;background:#FFFFFF;display: none;z-index: 5;
+				border-top: 1px solid gainsboro; border-bottom: 3px solid black;}
+				.sh{ width: 140px;height: 300px; float: left;margin-left: 90px;}
+				.min1{ width: 70px;height: 300px;float:left ; }
+				.sh p{ font-size: 18px; font-weight: bold;margin-top: 25px;}
+				.sh ul{ list-style: none;padding-left: 0px;margin-top: 25px;}
+				.sh ul li{ line-height: 28px; font-size: 13px;}
+				.sh ul li:hover{color: gray; }
+				

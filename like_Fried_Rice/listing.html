@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		#ul1{
+			cursor: pointer;
+			margin-left: 20px;
+		}
+			#ul1 li{
+				margin-top: 16px;
+				font-size: 12px;
+				font-family: "新宋体";
+				cursor: hand;
+			}
+			.in1{
+				display: none;
+				margin-top: 5px;
+				clear: both;
+				float: left;
+			}
+			.d1{
+				margin-left: 25px;
+				font-size: 12px;
+				margin-top: 5px;
+			}
+		</style>
+		<script type="text/javascript">
+		function change1(){
+			if(document.getElementById("u1").style.display != "none"){
+				dis1();
+			}else{
+				show1();
+			}
+		}
+			function show1(){
+				document.getElementById("u1").style.display ="block";
+			}
+			function dis1(){
+				document.getElementById("u1").style.display="none";
+			}
+			function change2(){
+			if(document.getElementById("u2").style.display != "none"){
+				dis2();
+			}else{
+				show2();
+			}
+		}
+			function show2(){
+				document.getElementById("u2").style.display ="block";
+			}
+			function dis2(){
+				document.getElementById("u2").style.display="none";
+			}
+			function change3(){
+			if(document.getElementById("u3").style.display != "none"){
+				dis3();
+			}else{
+				show3();
+			}
+		}
+			function show3(){
+				document.getElementById("u3").style.display ="block";
+			}
+			function dis3(){
+				document.getElementById("u3").style.display="none";
+			}
+			
+			function change4(){
+			if(document.getElementById("u4").style.display != "none"){
+				dis4();
+			}else{
+				show4();
+			}
+		}
+			function show4(){
+				document.getElementById("u4").style.display ="block";
+			}
+			function dis4(){
+				document.getElementById("u4").style.display="none";
+			}
+			function change5(){
+			if(document.getElementById("u5").style.display != "none"){
+				dis5();
+			}else{
+				show5();
+			}
+		}
+			function show5(){
+				document.getElementById("u5").style.display ="block";
+			}
+			function dis5(){
+				document.getElementById("u5").style.display="none";
+			}
+			function change6(){
+			if(document.getElementById("u6").style.display != "none"){
+				dis6();
+			}else{
+				show6();
+			}
+		}
+			function show6(){
+				document.getElementById("u6").style.display ="block";
+			}
+			function dis6(){
+				document.getElementById("u6").style.display="none";
+			}
+			function change7(){
+			if(document.getElementById("u7").style.display != "none"){
+				dis7();
+			}else{
+				show7();
+			}
+		}
+			function show7(){
+				document.getElementById("u7").style.display ="block";
+			}
+			function dis7(){
+				document.getElementById("u7").style.display="none";
+			}
+		//、、、、、、、、、	
+			function chance1(){
+					var ch1 = document.getElementsByName("li1");
+					for(var i = 0; i < ch1.length; i++)
+					{
+						ch1.item(i).style.display = "block";
+					}
+					document.getElementById("dx1").style.display = "none";
+					document.getElementById("bu1").style.display = "block";
+					document.getElementById("bu2").style.display = "block";
+			}
+			function delete1(){
+				var ch1 = document.getElementsByName("li1");
+				for(var i = 0; i < ch1.length; i++)
+				{
+					ch1.item(i).checked = false;
+					ch1.item(i).style.display = "none";
+				}
+				document.getElementById("dx1").style.display = "block";
+				document.getElementById("bu1").style.display = "none";
+				document.getElementById("bu2").style.display = "none";
+			}
+			function chance2(){
+					var ch1 = document.getElementsByName("li2");
+					for(var i = 0; i < ch1.length; i++)
+					{
+						ch1.item(i).style.display = "block";
+					}
+					document.getElementById("dx2").style.display = "none";
+					document.getElementById("bu3").style.display = "block";
+					document.getElementById("bu4").style.display = "block";
+			}
+			function delete2(){
+				var ch1 = document.getElementsByName("li2");
+				for(var i = 0; i < ch1.length; i++)
+				{
+					ch1.item(i).checked = false;
+					ch1.item(i).style.display = "none";
+				}
+				document.getElementById("dx2").style.display = "block";
+				document.getElementById("bu3").style.display = "none";
+					document.getElementById("bu4").style.display = "none";
+			}
+			function chance3(){
+					var ch1 = document.getElementsByName("li3");
+					for(var i = 0; i < ch1.length; i++)
+					{
+						ch1.item(i).style.display = "block";
+					}
+					document.getElementById("dx3").style.display = "none";
+					document.getElementById("bu5").style.display = "block";
+					document.getElementById("bu6").style.display = "block";
+			}
+			function delete3(){
+				var ch1 = document.getElementsByName("li3");
+				for(var i = 0; i < ch1.length; i++)
+				{
+					ch1.item(i).checked = false;
+					ch1.item(i).style.display = "none";
+				}
+				document.getElementById("dx3").style.display = "block";
+				document.getElementById("bu5").style.display = "none";
+				document.getElementById("bu6").style.display = "none";
+			}
+			function chance4(){
+					var ch1 = document.getElementsByName("li4");
+					for(var i = 0; i < ch1.length; i++)
+					{
+						ch1.item(i).style.display = "block";
+					}
+					document.getElementById("dx4").style.display = "none";
+					document.getElementById("bu7").style.display = "block";
+					document.getElementById("bu8").style.display = "block";
+			}
+			function delete4(){
+				var ch1 = document.getElementsByName("li4");
+				for(var i = 0; i < ch1.length; i++)
+				{
+					ch1.item(i).checked = false;
+					ch1.item(i).style.display = "none";
+				}
+				document.getElementById("dx4").style.display = "block";
+				document.getElementById("bu7").style.display = "none";
+				document.getElementById("bu8").style.display = "none";
+			}
+			function chance5(){
+					var ch1 = document.getElementsByName("li5");
+					for(var i = 0; i < ch1.length; i++)
+					{
+						ch1.item(i).style.display = "block";
+					}
+					document.getElementById("dx5").style.display = "none";
+					document.getElementById("bu9").style.display = "block";
+					document.getElementById("bu10").style.display = "block";
+			}
+			function delete5(){
+				var ch1 = document.getElementsByName("li5");
+				for(var i = 0; i < ch1.length; i++)
+				{
+					ch1.item(i).checked = false;
+					ch1.item(i).style.display = "none";
+				}
+				document.getElementById("dx5").style.display = "block";
+				document.getElementById("bu9").style.display = "none";
+				document.getElementById("bu10").style.display = "none";
+			}
+			function chance6(){
+					var ch1 = document.getElementsByName("li6");
+					for(var i = 0; i < ch1.length; i++)
+					{
+						ch1.item(i).style.display = "block";
+					}
+					document.getElementById("dx6").style.display = "none";
+					document.getElementById("bu11").style.display = "block";
+					document.getElementById("bu12").style.display = "block";
+			}
+			function delete6(){
+				var ch1 = document.getElementsByName("li6");
+				for(var i = 0; i < ch1.length; i++)
+				{
+					ch1.item(i).checked = false;
+					ch1.item(i).style.display = "none";
+				}
+				document.getElementById("dx6").style.display = "block";
+				document.getElementById("bu11").style.display = "none";
+				document.getElementById("bu12").style.display = "none";
+			}
+		</script>
+	</head>
+	<body>
+		<form action="#" method="get">
+		<ul type="none" id="ul1">
+			<li>
+				<span onclick="change1()">▶品牌</span>
+				<ul id="u1"  type="none" style="color: #AAAAAA;display: none;">
+					<dl>
+					<dt><input type="checkbox" class="in1" name="li1"/></dt>
+					<dd class="d1">耐克</dd>
+					<dt><input type="checkbox" name="li1" class="in1"/></dt>
+					<dd class="d1">阿迪达斯</dd>
+					<dt><input type="checkbox" name="li1" class="in1"/></dt>
+					<dd class="d1">阿迪休闲</dd>
+					<dt><input type="checkbox" name="li1" class="in1"/></dt>
+					<dd class="d1">阿迪三叶草</dd>
+					<dt><input type="checkbox" name="li1" class="in1"/></dt>
+					<dd class="d1">鬼冢虎</dd>
+					<dt><input type="checkbox" name="li1" class="in1"/></dt>
+					<dd class="d1">匡威</dd>
+					<dt><input type="checkbox" name="li1" class="in1"/></dt>
+					<dd class="d1">锐步</dd>
+					<dt><input type="checkbox" name="li1" class="in1"/></dt>
+					<dd class="d1">亚瑟士</dd>
+					<dt><input type="checkbox" name="li1" class="in1"/></dt>
+					<dd class="d1">万斯</dd>
+					<dt><input type="checkbox" name="li1" class="in1"/></dt>
+					<dd class="d1">彪马</dd>
+					<dt><input type="checkbox" name="li1" class="in1"/></dt>
+					<dd class="d1">斯凯奇</dd>
+					<dt><input type="checkbox" name="li1" class="in1"/></dt>
+					<dd class="d1">茵奈儿</dd>
+					<li onclick="chance1()" id="dx1">+多选</li>
+					<table border="0">
+						<tr>
+							<td><input type="button" name="bu1" id="bu1" value="确定" style="background-color: #AAAAAA; color: white; border-radius: 5px; width: 50px; display: none;" /></td>
+							<td><input type="button" name="bu1" id="bu2" value="取消" style="background-color: black; color: white; border-radius: 5px; width: 50px; display: none;" onclick="delete1()" /></td>
+						</tr>
+					</table>
+						
+						
+					</dl>
+				</ul>
+			</li>
+			<li>
+				<span onclick="change2()" style="clear: both;">▶品类</span>
+				<ul id="u2" type="none" style="color: #AAAAAA;display: none;" >
+				<dd class="d1">跑步鞋(844)</dd>
+				<dd class="d1">休闲鞋(1191)</dd>
+				<dd class="d1">板鞋(258)</dd>
+				<dd class="d1">经典复刻鞋(258)</dd>
+				<dd class="d1">篮球鞋(199)</dd>
+				<dd class="d1">帆布鞋(154)</dd>
+				<dd class="d1">户外鞋(57)</dd>
+				<dd class="d1">网球鞋(46)</dd>
+				<dd class="d1">凉鞋/拖鞋(66)</dd>
+				<dd class="d1">综合训练鞋(40)</dd>
+				<dd class="d1">足球鞋(34)</dd>
+				<dd class="d1">健步鞋(50)</dd>
+				</ul>
+			</li>
+			<li>
+				<span onclick="change3()">▶性别</span>
+				<ul id="u3" type="none" style="color: #AAAAAA;display: none;">
+					<dt><input type="checkbox" class="in1" name="li2"/></dt>
+					<dd class="d1">男子</dd>
+					<dt><input type="checkbox" class="in1" name="li2"/></dt>
+					<dd class="d1">女子</dd>
+					<dt><input type="checkbox" class="in1" name="li2"/></dt>
+					<dd class="d1">中性</dd>
+					<li onclick="chance2()" id="dx2">+多选</li>
+					<table border="0">
+						<tr>
+							<td><input type="button" name="bu1" id="bu3" value="确定" style="background-color: #AAAAAA; color: white; border-radius: 5px; width: 50px; display: none;" /></td>
+							<td><input type="button" name="bu1" id="bu4" value="取消" style="background-color: black; color: white; border-radius: 5px; width: 50px; display: none;" onclick="delete2()" /></td>
+						</tr>
+					</table>
+				</ul>
+			</li>
+			<li>
+				<span  onclick="change4()">▶价格</span>
+				<ul id="u4" type="none" style="color: #AAAAAA;display: none;">
+					<dt><input type="checkbox" class="in1" name="li3"/></dt>
+					<dd class="d1">1-50元</dd>
+					<dt><input type="checkbox" class="in1" name="li3"/></dt>
+					<dd class="d1">51-100元</dd>
+					<dt><input type="checkbox" class="in1" name="li3"/></dt>
+					<dd class="d1">101-200元</dd>
+					<dt><input type="checkbox" class="in1" name="li3"/></dt>
+					<dd class="d1">201-300元</dd>
+					<dt><input type="checkbox" class="in1" name="li3"/></dt>
+					<dd class="d1">301-500元</dd>
+					<dt><input type="checkbox" class="in1" name="li3"/></dt>
+					<dd class="d1">501-700元</dd>
+					<dt><input type="checkbox" class="in1" name="li3"/></dt>
+					<dd class="d1">701-1000元</dd>
+					<dt><input type="checkbox" class="in1" name="li3"/></dt>
+					<dd class="d1">1000元以上</dd>
+					<li onclick="chance3()" id="dx3">+多选</li>
+					<table border="0">
+						<tr>
+							<td><input type="button" name="bu1" id="bu5" value="确定" style="background-color: #AAAAAA; color: white; border-radius: 5px; width: 50px; display: none;" /></td>
+							<td><input type="button" name="bu1" id="bu6" value="取消" style="background-color: black; color: white; border-radius: 5px; width: 50px; display: none;" onclick="delete3()" /></td>
+						</tr>
+					</table>
+				</ul>
+			</li>
+			<li >
+				<span onclick="change5()">▶尺码</span>
+				<ul id="u5" type="none" style="color: #AAAAAA;display: none;">
+					<dt><input type="checkbox" class="in1" name="li4"/></dt>
+					<dd class="d1">28</dd>
+					<dt><input type="checkbox" class="in1" name="li4"/></dt>
+					<dd class="d1">29</dd>
+					<dt><input type="checkbox" class="in1" name="li4"/></dt>
+					<dd class="d1">2XOT</dd>
+					<dt><input type="checkbox" class="in1" name="li4"/></dt>
+					<dd class="d1">2XSC</dd>
+					<dt><input type="checkbox" class="in1" name="li4"/></dt>
+					<dd class="d1">30</dd>
+					<dt><input type="checkbox" class="in1" name="li4"/></dt>
+					<dd class="d1">31</dd>
+					<dt><input type="checkbox" class="in1" name="li4"/></dt>
+					<dd class="d1">32</dd>
+					<dt><input type="checkbox" class="in1" name="li4"/></dt>
+					<dd class="d1">32DD</dd>
+					<dt><input type="checkbox" class="in1" name="li4"/></dt>
+					<dd class="d1">33</dd>
+					<dt><input type="checkbox" class="in1" name="li4"/></dt>
+					<dd class="d1">34</dd>
+					<li  onclick="chance4()" id="dx4">+多选</li>
+					<table border="0">
+						<tr>
+							<td><input type="button" name="bu1" id="bu7" value="确定" style="background-color: #AAAAAA; color: white; border-radius: 5px; width: 50px; display: none;" /></td>
+							<td><input type="button" name="bu1" id="bu8" value="取消" style="background-color: black; color: white; border-radius: 5px; width: 50px; display: none;" onclick="delete4()" /></td>
+						</tr>
+					</table>
+					<li class="d1">﹀</li>
+				</ul>
+			</li>
+			<li>
+				<span onclick="change6()">▶颜色</span>
+				<ul id="u6" type="none" style="color: #AAAAAA;display: none;">
+					<dt><input type="checkbox" class="in1" name="li5"/></dt>
+					<dd class="d1">黑色</dd>
+					<dt><input type="checkbox" class="in1" name="li5"/></dt>
+					<dd class="d1">白色</dd>
+					<dt><input type="checkbox" class="in1" name="li5"/></dt>
+					<dd class="d1">蓝色</dd>
+					<dt><input type="checkbox" class="in1" name="li5"/></dt>
+					<dd class="d1">灰色</dd>
+					<dt><input type="checkbox" class="in1" name="li5"/></dt>
+					<dd class="d1">红色</dd>
+					<dt><input type="checkbox" class="in1" name="li5"/></dt>
+					<dd class="d1">绿色</dd>
+					<dt><input type="checkbox" class="in1" name="li5"/></dt>
+					<dd class="d1">黄色</dd>
+					<dt><input type="checkbox" class="in1" name="li5"/></dt>
+					<dd class="d1">棕色</dd>
+					<dt><input type="checkbox" class="in1" name="li5"/></dt>
+					<dd class="d1">紫色</dd>
+					<dt><input type="checkbox" class="in1" name="li5"/></dt>
+					<dd class="d1">拼色</dd>
+					<li onclick="chance5()" id="dx5">+多选</li>
+					<table border="0">
+						<tr>
+							<td><input type="button" name="bu1" id="bu9" value="确定" style="background-color: #AAAAAA; color: white; border-radius: 5px; width: 50px; display: none;" /></td>
+							<td><input type="button" name="bu1" id="bu10" value="取消" style="background-color: black; color: white; border-radius: 5px; width: 50px; display: none;" onclick="delete5()" /></td>
+						</tr>
+					</table>
+					<li>﹀</li>
+				</ul>
+			</li>
+			<li>
+				<span  onclick="change7()">▶季节</span>
+				<ul id="u7"  type="none" style="color: #AAAAAA;display: none;">
+					<dt><input type="checkbox" class="in1" name="li6"/></dt>
+					<dd class="d1">秋季</dd>
+					<dt><input type="checkbox" class="in1" name="li6"/></dt>
+					<dd class="d1">夏季</dd>
+					<dt><input type="checkbox" class="in1" name="li6"/></dt>
+					<dd class="d1">冬季</dd>
+					<dt><input type="checkbox" class="in1" name="li6"/></dt>
+					<dd class="d1">春季</dd>
+					<li onclick="chance6()" id="dx6">+多选</li>
+					<table border="0">
+						<tr>
+							<td><input type="button" name="bu1" id="bu11" value="确定" style="background-color: #AAAAAA; color: white; border-radius: 5px; width: 50px; display: none;" /></td>
+							<td><input type="button" name="bu1" id="bu12" value="取消" style="background-color: black; color: white; border-radius: 5px; width: 50px; display: none;" onclick="delete6()" /></td>
+						</tr>
+					</table>
+				</ul>
+			</li>
+			
+		</ul>
+		</form>
+	</body>
+</html>

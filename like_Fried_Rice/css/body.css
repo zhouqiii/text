@@ -1,0 +1,101 @@
+			/*主体*/
+			#body{ width: 100%; height: 3250px; }
+			/*个人中心主体*/
+			#bodycenter{ width: 100%; height: 1270px; }
+			
+			/*轮播*/
+			#banner{ width: 100%;height: 600px;}
+			#slider1 {width: 100%;max-height: 600px;}
+			/*轮播下边*/
+			.body1 h1{text-align: center;}
+			.body2 { text-align: center;}
+			/*三个大图*/
+			#body4{ width: 100%;height: 450px;margin-top: 70px;}
+			#body4min1{ width: 78%;height: 440px;margin: 0px auto;}
+			.body4min{width: 32%;height: 400px; float: left;margin-left: 10px; }
+				#body4min2{margin-left: 20px; background: url(../img/w1.png);background-repeat: no-repeat;}
+				#body4min2:hover{ background: url(../img/q1.png);background-repeat: no-repeat;}
+				#body4min3{ background: url(../img/w2.png);background-repeat: no-repeat;}
+				#body4min3:hover{ background: url(../img/q2.png);background-repeat: no-repeat;}
+				#body4min4{ background: url(../img/w13.png);background-repeat: no-repeat;}
+				#body4min4:hover{ background: url(../img/q3.png);background-repeat: no-repeat;}
+			/*在下边*/
+			#body5{ width: 100%;height: 500px;}
+				#body5min{ width: 80%;height: 350px;margin: 0px auto;margin-top: 30px;}
+				/*秒杀板块*/
+			#body5min2{ width: 100%;height: 40px;}
+			#myclock{ width: 100px;height: 70px;background: gainsboro;float: right;margin-right: 200px; 
+					font-size: 14px;position: fixed;top: 120px;right: -180px;z-index: 3;
+					text-align: center;border-radius: 10px;padding-top: 10px;color: white;}
+			
+			
+			.fg1{ width: 240px;height: 350px;float: left;margin-left: 20px; position: relative;
+				text-align: center;font-size: 12px;line-height: 25px;}
+				.fg1 span{ font-size: 16px;font-weight: bold;line-height: 35px;}
+			#fg1copy{width: 240px;height: 240px;float: left;margin-left: 20px; position: absolute;
+			  background:rgba(11,11,00,0.5);color:#fff; display: block;}
+			#fg2copy{width: 240px;height: 240px;float: left;margin-left: 280px;position: absolute;
+			  background:rgba(11,11,00,0.5);color:#fff;display: block;}
+			#fg3copy{width: 240px;height: 240px;float: left;margin-left:0px;position: absolute;top: 0px;
+			  background:rgba(11,11,00,0.5);color:#fff;display:none;}
+			#fg4copy{width: 240px;height: 240px;float: left;margin-left:0px;position: absolute;top: 0px;
+			  background:rgba(11,11,00,0.5);color:#fff;display: none;}
+				/*秒杀倒计时*/
+			.gotime{ width: 100px;height: 50px;background:rgba(255,255,255,0.5);color:white;margin: 0px auto;
+				font-weight: 700;margin-top: 90px;text-align: center;color: black;border-radius: 5px;
+				font-size: 13px;line-height: 20px;}
+			.showtime{ list-style: none;line-height: 10px;padding-left: 2px;margin-top: 3px;}
+			.showtime li{ float: left;margin-left: 4px;margin-top: 0px;line-height: 22px;font-weight: 800;}
+				.timemin{width: 22px;height: 22px;background: gainsboro;border-radius: 5px; }
+				
+			/*又下边*/
+			#body6{ width: 100%; height: 450px;}
+			#body6min{ text-align: center;}
+			#body6min1{width: 100%;height: 300px;}
+			#body6min3{width: 80%;height: 260px;margin: 0px auto;}
+			.body6min2{width: 20%;float: left;margin-left: 40px;}
+				.body6min2 img{ width: 220px; height: 220px;}
+				/*图片遮罩并提示信息*/
+				#content1{position: relative; padding: 0; width: 220px; height: 220px;}
+				#mask{ position: absolute;top:0px;left: 0; width: 220px; height: 220px;
+				background: rgba(11, 11, 00, 0.5);color:#fff;line-height: 220px;text-align: center; font-size: 13px;
+			    display: none;}
+			    #content2{position: relative; padding: 0; width: 220px; height: 220px;}
+				#mask2{ position: absolute;top:-203px;left: 0; width: 220px; height: 220px;
+				background: rgba(11, 11, 00, 0.5);color:#fff;line-height: 220px;text-align: center; font-size: 13px;
+			    display: none;}
+			    #content3{position: relative; padding: 0; width: 220px; height: 220px;}
+				#mask3{ position: absolute;top:-203px;left: 0; width: 220px; height: 220px;
+				background: rgba(11, 11, 00, 0.5);color:#fff;line-height: 220px;text-align: center; font-size: 13px;
+			    display: none;}
+			    #content4{position: relative; padding: 0; width: 220px; height: 220px;}
+				#mask4{ position: absolute;top:-203px;left: 0; width: 220px; height: 220px;
+				background: rgba(11, 11, 00, 0.5);color:#fff;line-height: 220px;text-align: center; font-size: 13px;
+			    display: none;}
+			/*底部*/   
+			#body7{ width: 100%;height: 450px;background: #333333;}
+			    #body7min{ width: 100%;height: 140px;background: #333333; border-bottom: 1px solid grey;}
+			    #body7min ul{ list-style: none;}
+			    #body7min ul li{ float: left;margin-left: 50px;margin-top: 55px;}
+			    #body7min ul li img{ height: 30px;}
+			#body7min1{ width: 100%; height: 220px;}
+				.body7min2{ width: 100px;height: 200px;float: left;margin-left: 95px;margin-top: 20px;}
+				.body7min2 p{  font-size: 13px;color: white;}
+				.body7min2 ul{ list-style: none;padding-left: 0px;font-size: 13px;margin-top: 20px;}
+				.body7min2 ul li{ list-style: none;height: 35px;color: gray;}
+				.body7min2 ul li:hover{color: white; }
+			#body7min2{ width: 100%;height: 60px;padding-left: 40px;}	
+			    
+			#body7min3 ul{list-style: none; }
+			#body7min3 ul li{float: left;padding-left: 14px; font-size: 13px;color: white;}    
+			#body7min4{clear: both; font-size: 13px;color: white;line-height: 50px;margin-left: 53px;}
+			
+				/*a标签回到顶部*/
+			#fixedfoot{ width: 50px;height: 50px;position: fixed;bottom: 30px;right: 10px; 
+					z-index: 10; }
+			#fixedfoot span{display: block; width: 50px; height: 50px;  color: gray;
+		    	font-size: 40px;  line-height: 40px; text-align: center; cursor:pointer;}
+		    #fixedfoot a{ text-decoration: none;}
+		    #fixedfoot :hover{ background: gainsboro;color: black;border-radius: 10px;}
+		    
+			

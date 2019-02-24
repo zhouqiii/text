@@ -1,0 +1,260 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#title{width: 100%;
+				height: 40px;
+				background-color: #333333;
+				}
+			#lift-content{
+				margin-left: 145px;float: left;line-height: 40px;font-family: "宋体";list-style: none;
+			}
+			#right-content{margin-right: 92px;float: right;line-height: 40px;font-family: "宋体";list-style: none;}
+			#lift-content a:hover{color: gray;}
+			#lift-content a{color: #FFFFFF; text-decoration: none;}
+			#lift-content li{float: left; font-size: 12px;
+			}
+			#right-content li{float: left;font-size: 12px; margin-right: 15px;color: gray;}
+			#right-content a{color: #FFFFFF; text-decoration: none;}
+			#right-content a:hover{color: gray;}
+			.sc:hover{background: url(img/购物车图片/3.png)  no-repeat;}
+			.gw:hover{background: url(img/购物车图片/4.png) no-repeat;}
+			.sc{background: url(img/购物车图片/5.png) no-repeat;}
+			.gw{background: url(img/购物车图片/6.png) no-repeat;}
+			.mr11{padding-right: 11px; }
+			.ml13{padding-right: ; 13px;}
+			.ml11{padding-right: 20px;}
+			#App{margin-left: 20px;}
+			.show{height: 40px;}
+			.show1{height: 40px;}
+			.a1{width: 140px;position: absolute;z-index: 5;   top:40px;left: 90px;display: none;background: #FFFFFF;
+			}
+			.a{width: 140px;position: absolute;z-index: 5;top:40px;left: 140px;display: none;background: #FFFFFF;	
+			}
+			.b1{width: 140px;padding-top: 10px;margin-top: 5px;border: 1px #F1F1F1 solid;text-align: center;
+			}
+			.b{width: 140px;padding-top: 10px;margin-top: 5px;border: 1px #F1F1F1 solid;text-align: center;
+			}
+			.w1{color: #333333;font: 12px/20px tahoma,'Microsoft YaHei';text-align: center;
+			}
+			#notice{height: 40px;}
+			#noticeopen{position: absolute; width: 200px;height: 140px; background: #FFFFFF;right: 120px;top: 40px;}
+			#notice-content{position: absolute; width: 200px;height: 140px; background: #FFFFFF; border: 1px #F1F1F1 solid;z-index: 100;padding-left: 20px;margin-top: 5px; display: none;}
+			#notice-content li{border-bottom: 1px #F1F1F1 solid;width: 180px; font: 12px/20px tahoma,'Microsoft YaHei';margin-top: 20px;}
+			#notice-content a{font: 12px/20px tahoma,'Microsoft YaHei'; color: #666666;}
+			#notice-content a:hover{color: #666666;}
+			#head{width: 100%;
+				height: 80px;
+				background-color: white;
+				}
+			#body{width: 100%;
+				 height: 550px;
+				/* background-image: url(img/shoes.jpg);
+				 background-repeat: no-repeat;*/
+				 }
+			#foot{width: 100%;
+				height: 40px;
+				background-color: white;
+				}
+			#form1{width: 410px;
+				height: 410px; 
+				background-color: white;
+				position: absolute;   
+				z-index: 10;
+				margin-left: 800px;
+				margin-top: 60px;
+				 }
+			.li1{list-style: none;
+				float: left;
+				margin: 10px;
+				background-color: #333333;
+				width: 130px;
+				height:30px;
+				padding-left: 45px;
+				padding-top: 10px;
+				}	 
+			#ul1{margin-left: 25px;
+				margin-top: 5px;
+				padding-left: 0px;
+			 }
+			#input1{
+			    background:url(img/2018-10-18_163431.png)  no-repeat  ;
+			    width: 270px;
+			    height: 40px;
+			   /* border-radius:5px;*/
+			    border: 1px solid #999999;
+			    box-shadow: 1px 1px 3px #cccccc;
+			    padding-left: 50px;
+			    margin-left: 40px;
+			    margin-top: 20px;
+				}
+			#input2{
+			    background:url(img/2018-10-18_165219.png)  no-repeat  ;
+			    width: 270px;
+			    height: 40px;
+			   /* border-radius:5px;*/
+			    border: 1px solid #999999;
+			    box-shadow: 1px 1px 3px #cccccc;
+			    padding-left: 50px;
+			    margin-left: 40px;
+			    margin-top: 20px;
+				}
+			#login{
+				width: 350px;
+				height: 40px;
+				background-color: #333333;
+				color: white;
+				margin-left: 30px;
+				margin-bottom: 10px;
+			}
+			#div1{width: 300px;
+				 height: 50px;
+				 margin: 0 auto;
+				 padding-top: 10px;
+				 }
+			.div2{float: left;
+				 margin-left: 20px;	
+				 }
+		</style>
+		<script type="text/javascript">
+			function show(){
+				document.getElementById("gzh").style.display="block";
+				
+			}
+			function no(){
+				document.getElementById("gzh").style.display="none";
+			}
+			function show1(){
+				document.getElementById("xz").style.display="block";
+				
+			}
+			function no1(){
+				document.getElementById("xz").style.display="none";
+			}
+			function show2(){
+				document.getElementById("notice-content").style.display="block";
+				
+			}
+			function no2(){
+				document.getElementById("notice-content").style.display="none";
+			}
+			function testUsername() {
+			var username =document.getElementById("input1").value;
+				/*alert();*/
+			if (username=="") {
+				document.getElementById("span1").innerHTML="账号不能为空"
+			} 
+			else{
+				document.getElementById("span1").innerHTML="&nbsp;&nbsp;&nbsp;"
+				}	
+			}
+			function testPassword() {
+				var psw =document.getElementById("input2").value.length
+			/*	alert(psw);*/
+			  if (psw<6||psw>25) {
+			  	document.getElementById("span2").innerHTML="密码必须为6-25位"
+			  } else{
+			  		document.getElementById("span2").innerHTML="&nbsp;&nbsp;&nbsp;"
+			  }
+			
+			
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div id="title">
+			<ul id="lift-content">
+				<li>
+					<div class="show" onmouseover="show()" onmouseout="no()">
+						<a href="#">关注</a>
+						<div class="a1" id="gzh" >
+							<div class="b1">
+								<img src="img/购物车图片/weChat.jpg" style="margin: 0 auto;"/><br />
+								<span class="w1">关注公众号</span>
+							</div>
+							
+						</div>
+					</div>
+					
+				</li>
+				<li id="App">
+					<div class="show1" onmouseover="show1()" onmouseout="no1()">
+						<a href="#">下载APP</a>
+						<div class="a" id="xz">
+							<div class="b" >
+								<img src="img/购物车图片/app.jpg" style="margin: 0 auto;"/><br />
+								<span class="w1">优购app下载</span>
+							</div>
+						</div>
+					</div>
+				</li>   
+			</ul>
+			<ul id="right-content">
+				<li class="mr11"><a href="#">登录</a>/<a href="注册.html ">注册</a></li>
+				<li class="mr11"><a href="#" class="sc">&nbsp;&nbsp;收藏</a></li>
+				<li class="ml13"><a href="#" class="gw">&nbsp;&nbsp;购物袋</a></li>
+				<li class="ml11">
+					<div id="notice" onmouseover="show2()" onmouseout="no2()">
+						<a href="#">公告</a>
+							<div id="noticeopen">
+							<div id="notice-content"  >
+								<ul style="list-style: none;">
+									<li ><a href="#" style="color: red;">优购客服电话变更</a></li>
+									<li><a href="#">关闭分享购频道</a></li>
+									<li><a href="#">提醒会员谨防诈骗电话</a></li>
+								</ul>
+							</div>
+							</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		
+		
+		
+		
+		<div id="head">
+			<div style="float: left;"><a href="index.html"><img  src="img/2018-10-18_142725.png"   style="margin-left: 150px;margin-top: 15px;"/></a></div>
+			<div style="float: left;padding-left: 20px;padding-top: 30px;"  ><p style="font-size: 18px;color: grey;">用户登录</p></div>
+		</div>
+		
+		<div id="body">
+		  <div id="form1">
+		  	<ul id="ul1">
+		  	<a href="#"  >	<li class="li1" ><span style="color: white; font-size: 10px;">账号密码登录</span></li></a>
+		  	<a href="手机快捷登录.html"  >	<li class="li1" style="background-color: #F3F3F3;margin-left: -15px;"><span  style="color: black;font-size: 10px" >手机快捷登录</span></li></a>
+		  	</ul>
+		  <form>
+		  	<input type="text" id="input1" name="name1" for="reservation" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  手机号/会员名称/邮箱" onblur="testUsername()"  />
+		  	<br />
+		  	<span id="span1"  style="font-size: 3px;margin-left: 40px; color: red;">&nbsp;&nbsp;&nbsp;</span>
+		  	<input type="password" id="input2" name="password" for="reservation" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 请输入密码" onblur="testPassword()"/>
+		  	<br />
+		  	<span id="span2" style="font-size: 5px;margin-left: 40px; color: red;">&nbsp;&nbsp;&nbsp;</span>
+		  </form>
+		 	 <br />
+		 	 <a style="color: #999999;margin-left:320px ;font-size: 10px;" href="#">忘记密码？</a>	
+			 <input type="submit" id="login" value="点击登录" onclick="window.open('center.html')" />
+		  	<br /><span style="font-size: 7px;color: #999999;margin-left: 130px;margin-top: 20px;">使用合作网站账号登录优购：</span>
+				<div id="div1">
+				<div class="div2" style="margin-left: 0;"> <a href="#"><img src="img/wx.png"/></a>&nbsp;&nbsp;&nbsp;<span  style="color: #CCCCCC;">|</span>    </div>
+				<div class="div2"> <a href="#"> <img src="img/2018-10-18_192553.png"/></a>&nbsp;&nbsp;&nbsp;<span  style="color: #CCCCCC;">|</span>    </div>
+				<div class="div2"> <a href="#"><img src="img/2018-10-18_192606.png"/></a>&nbsp;&nbsp;&nbsp;<span  style="color: #CCCCCC;">|</span>    </div>
+				<div class="div2"> <a href="#"><img src="img/zhifu.png"/></a>  </div>
+				</div>
+		  </div>
+		<a href="#"><img src="img/2018-10-18_151950.png" style="width: 100%; position: absolute;z-index: 1;"/></a>   
+		
+		</div>
+		
+		<div id="foot"><span   style="font-size: 3px;color: #CCCCCC;margin-left: 300px;">Copyright © 2011-2014 Yougou Technology Co., Ltd. 粤ICP备09070608号-4 增值电信业务经营许可证：粤 B2-20090203</span></div>
+	</body>
+</html>
